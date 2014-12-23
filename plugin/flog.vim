@@ -177,11 +177,13 @@ options = {
       :continue => true,
       :all      => true
     }
-
+begin
 flogger = Flog.new options
 flogger.flog ::VIM::Buffer.current.name
 show_complexity flogger.return_report
-
+rescue
+#Silence it in a hard way :D
+end
 EOF
 
 call s:UpdateHighlighting()
