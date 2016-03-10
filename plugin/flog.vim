@@ -52,7 +52,6 @@ endif
 
 ruby << EOF
 
-require 'rubygems'
 require 'flog'
 
 class Flog
